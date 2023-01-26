@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/bug-tracker/static/css/main.21282d40.css",
-    "main.js": "/bug-tracker/static/js/main.3bf3f58d.js",
-    "static/js/787.e12a4eb5.chunk.js": "/bug-tracker/static/js/787.e12a4eb5.chunk.js",
-    "static/media/Rajdhani-Bold.ttf": "/bug-tracker/static/media/Rajdhani-Bold.a5a831c1b8c8eb1b83ff.ttf",
-    "static/media/Rajdhani-Light.ttf": "/bug-tracker/static/media/Rajdhani-Light.7f948ddb3029f1193092.ttf",
-    "static/media/Rajdhani-Regular.ttf": "/bug-tracker/static/media/Rajdhani-Regular.148606c1eb703f6e597a.ttf",
-    "index.html": "/bug-tracker/index.html",
-    "main.21282d40.css.map": "/bug-tracker/static/css/main.21282d40.css.map",
-    "main.3bf3f58d.js.map": "/bug-tracker/static/js/main.3bf3f58d.js.map",
-    "787.e12a4eb5.chunk.js.map": "/bug-tracker/static/js/787.e12a4eb5.chunk.js.map"
+    "main.css": "/Bug-Tracker/static/css/main.ee711701.css",
+    "main.js": "/Bug-Tracker/static/js/main.fec11a51.js",
+    "static/js/787.e12a4eb5.chunk.js": "/Bug-Tracker/static/js/787.e12a4eb5.chunk.js",
+    "static/media/Rajdhani-Bold.ttf": "/Bug-Tracker/static/media/Rajdhani-Bold.a5a831c1b8c8eb1b83ff.ttf",
+    "static/media/Rajdhani-Light.ttf": "/Bug-Tracker/static/media/Rajdhani-Light.7f948ddb3029f1193092.ttf",
+    "static/media/Rajdhani-Regular.ttf": "/Bug-Tracker/static/media/Rajdhani-Regular.148606c1eb703f6e597a.ttf",
+    "index.html": "/Bug-Tracker/index.html",
+    "main.ee711701.css.map": "/Bug-Tracker/static/css/main.ee711701.css.map",
+    "main.fec11a51.js.map": "/Bug-Tracker/static/js/main.fec11a51.js.map",
+    "787.e12a4eb5.chunk.js.map": "/Bug-Tracker/static/js/787.e12a4eb5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.21282d40.css",
-    "static/js/main.3bf3f58d.js"
+    "static/css/main.ee711701.css",
+    "static/js/main.fec11a51.js"
   ]
 }
