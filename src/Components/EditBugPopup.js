@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const AddBugPopup = ({ onEditBug }) => {
+const EditBugPopup = ({ onEditBug }) => {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [severity, setSeverity] = useState("Low");
@@ -12,11 +12,11 @@ const AddBugPopup = ({ onEditBug }) => {
 
   const handleEditBug = (e) => {
     e.preventDefault();
-    onEditBug({ name, description,reportedBy, severity, status, createdDate });
+    onEditBug({ name, description, reportedBy, severity, status, createdDate });
   };
 
   return (
-    <div className="add-bug-popup">
+    <div className="edit-bug-popup">
       <form onSubmit={handleEditBug}>
         <div className="form-group">
           <label>Bug Name</label>
@@ -57,6 +57,7 @@ const AddBugPopup = ({ onEditBug }) => {
             onChange={(e) => setStatus(e.target.value)}
           >
             <option value="Open">Open</option>
+            <option value="In_Progress">In Progress</option>
             <option value="Closed">Closed</option>
           </select>
         </div>
@@ -80,4 +81,4 @@ const AddBugPopup = ({ onEditBug }) => {
   );
 };
 
-export default AddBugPopup;
+export default EditBugPopup;

@@ -1,59 +1,23 @@
-import React, { useState } from "react";
-import BugList from "./Components/BugList";
-import AddBugPopup from "./Components/AddBugPopup";
-import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HomePage from "./Pages/HomePage";
+import NavigationBar from "./Navigation/NavigationBar";
+import AboutPage from "./Pages/AboutPage";
 
-const App = () => {
-  const [bugs, setBugs] = useState([
-    {
-      name: "Bug 1",
-      reportedBy: "User 1",
-      description: "not closing",
-      createdDate: "01/01/2022",
-      status: "Open",
-      severity: "Low",
-    },
-    {
-      name: "Bug 2",
-      reportedBy: "User 2",
-      description: "not closing",
-      createdDate: "02/01/2022",
-      status: "Closed",
-      severity: "Medium",
-    },
-  ]);
+import "./App.css"
 
-  
-  const [popupOpen, setPopupOpen] = useState(false);
-
-  const handleAddBug = (newBug) => {
-    setPopupOpen((prevState) => !prevState);
-    setBugs((prevBugs) => [...prevBugs, newBug]);
-  };
-
-  const handlePopupOpen = () => {
-    setPopupOpen((prevState) => !prevState);
-  };
-
+function App() {
   return (
-    <div>
-        <div className="main-title">Bug Tracker</div>
-        {popupOpen && (
-          <AddBugPopup onClose={handlePopupOpen} onAddBug={handleAddBug} />
-        )}
-        <div className="table table-unsolved">
-          <div className="secondary-title">In progress</div>
-          <BugList bugs={bugs} />
-        </div>
-        <div className="table table-solved">
-          <div className="secondary-title">Completed</div>
-          <BugList bugs={bugs} />
-        </div>
-        <button className="btn btn-primary btn-add-bug" onClick={handlePopupOpen}>
-          Add Bug
-        </button>
-    </div>
+    <>
+      <BrowserRouter>
+        <NavigationBar />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          {/* <Route path="/users/:id" element={<UserPage />} /> */}
+        </Routes>
+      </BrowserRouter>
+    </>
   );
-};
+}
 
 export default App;

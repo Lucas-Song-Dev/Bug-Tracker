@@ -1,32 +1,24 @@
 import React, { useState } from "react";
 
-const BugList = ({ bugs, onUpdateBug }) => {
-  const [selectedBug, setSelectedBug] = useState(null);
+const BugList = ({ bugs, onEditBug, onResolveBug }) => {
 
-  const handleBugSelect = (bug) => {
-    setSelectedBug(bug);
+  const handleResolveBug = (id) => {
+    onResolveBug(id);
   };
 
-  const handleStatusChange = (e) => {
-    const updatedBug = { ...selectedBug, status: e.target.value };
-    onUpdateBug(updatedBug);
-    setSelectedBug(null);
+  const handleEditBug = (id) => {
+    onEditBug(id);
   };
-
-  const handleEditBug = (e) => {
-    
-
-  }
 
   return (
     <>
-      <table >
+      <table>
         <thead>
           <tr>
             <th></th>
-            <th>BUG Name</th>
-            <th>BUG Description</th>
-            <th>Reported by</th>
+            <th>Name</th>
+            <th style={{width: "12vw"}}>Description</th>
+            <th>Reported</th>
             <th>Created date</th>
             <th>Status</th>
             <th>Severity</th>
@@ -36,15 +28,16 @@ const BugList = ({ bugs, onUpdateBug }) => {
         <tbody>
           {bugs.map((bug) => (
             <tr key={bug.name}>
-              <td><button onClick={handleEditBug()}> edit </button></td>
+              <td><button onClick={() => handleEditBug(bug)}> edit </button></td>
               <td>{bug.name}</td>
-              <td>{bug.description}</td>
+              <td style={{width: "12vw"}}>{bug.description}</td>
               <td>{bug.reportedBy}</td>
               <td>{bug.createdDate}</td>
               <td>{bug.status}</td>
               <td>{bug.severity}</td>
-              <td><button> resolve </button></td>
-
+              <td>
+              {<button onClick={() => handleResolveBug(bug)}>{bug.status === 'Open' ? 'resolve' : 're-open'}</button> }
+              </td>
             </tr>
           ))}
         </tbody>
