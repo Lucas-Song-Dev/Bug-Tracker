@@ -1,38 +1,148 @@
-.App {
+body {background-color: grey;}
+
+@font-face {
+  font-family: "Light";   /*Can be any text*/
+  src: local("Rajdhandi-Light"),
+    url("./Fonts/Rajdhani/Rajdhani-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Regular";   /*Can be any text*/
+  src: local("Rajdhandi-Regular"),
+    url("./Fonts/Rajdhani/Rajdhani-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Bold";   /*Can be any text*/
+  src: local("Rajdhandi-Bold"),
+    url("./Fonts/Rajdhani/Rajdhani-Bold.ttf") format("truetype");
+}
+
+.btn {
+  font-family: "Light"; 
+  display: inline-block;
+  font-weight: 400;
+  color: #212529;
   text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.btn-primary {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+  font-family: Regular;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.btn-add-bug{
+  bottom: 10px;
+  left: 10px;
+  position: absolute;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.add-bug-popup {
+  position: fixed; /* position the popup in the center of the screen */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0px 0px 100vw #ccc;
+  z-index: 100; /* make sure the popup is above other elements */
+}
+
+.add-bug-popup input,
+.add-bug-popup textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+}
+
+.add-bug-popup label {
+  font-weight: bold;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.add-bug-popup .btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #4CAF50;
   color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.add-bug-popup .btn:hover {
+  background-color: #3e8e41;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.table-title{
+  font-family: "Bold"; 
+  position: sticky;
+  width: 100vw;
+  height: 50px;
+  box-shadow: #212529;
+}
+
+.table{
+  width: 33vw;
+  position: absolute;
+  font-family: Regular;
+}
+
+.table-unsolved{
+  left: 1vw;
+  
+}
+.table-solved{
+  right: 10vw;
+}
+
+.main-title{
+  font-family: "Bold"; 
+  font-size: 10vh;
+  position:static;
+  top: -10px;
+  left: 40px;
+  size: 15px;
+
+}
+
+.secondary-title{
+  border-color: black;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  font-family: "Bold";
+  font-size: large;
+  position:static;
+  top: -10px;
+  left: 10px;
+  size: 10px;
+  width: 42vw;
+}
+
+td {
+  width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-color: rgba(255, 255, 255, 0.8); /* set the background color of the text */
+  color: transparent; /* make the text transparent */
 }
