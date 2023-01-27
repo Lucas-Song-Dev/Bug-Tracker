@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Bug-Tracker/static/css/main.3d3b0ce1.css",
-    "main.js": "/Bug-Tracker/static/js/main.967127ca.js",
+    "main.css": "/Bug-Tracker/static/css/main.4e5f199b.css",
+    "main.js": "/Bug-Tracker/static/js/main.3b8838bc.js",
     "static/media/Rajdhani-Bold.ttf": "/Bug-Tracker/static/media/Rajdhani-Bold.a5a831c1b8c8eb1b83ff.ttf",
     "static/media/Rajdhani-Light.ttf": "/Bug-Tracker/static/media/Rajdhani-Light.7f948ddb3029f1193092.ttf",
     "static/media/Rajdhani-Regular.ttf": "/Bug-Tracker/static/media/Rajdhani-Regular.148606c1eb703f6e597a.ttf",
     "index.html": "/Bug-Tracker/index.html",
-    "main.3d3b0ce1.css.map": "/Bug-Tracker/static/css/main.3d3b0ce1.css.map",
-    "main.967127ca.js.map": "/Bug-Tracker/static/js/main.967127ca.js.map"
+    "main.4e5f199b.css.map": "/Bug-Tracker/static/css/main.4e5f199b.css.map",
+    "main.3b8838bc.js.map": "/Bug-Tracker/static/js/main.3b8838bc.js.map"
   },
   "entrypoints": [
-    "static/css/main.3d3b0ce1.css",
-    "static/js/main.967127ca.js"
+    "static/css/main.4e5f199b.css",
+    "static/js/main.3b8838bc.js"
   ]
 }
