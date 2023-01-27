@@ -1,1 +1,1 @@
-http://localhost:3000/Bug-Tracker
+https://lucas-song-dev.github.io/Bug-Tracker/
