@@ -1,23 +1,62 @@
-body {background-color: grey;}
+body {
+  background-color: grey;
+  overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
 
 @font-face {
-  font-family: "Light";   /*Can be any text*/
+  font-family: "Rajdhandi-Light"; /*Can be any text*/
   src: local("Rajdhandi-Light"),
     url("./Fonts/Rajdhani/Rajdhani-Light.ttf") format("truetype");
 }
 @font-face {
-  font-family: "Regular";   /*Can be any text*/
+  font-family: "Rajdhandi-Regular"; /*Can be any text*/
   src: local("Rajdhandi-Regular"),
     url("./Fonts/Rajdhani/Rajdhani-Regular.ttf") format("truetype");
 }
 @font-face {
-  font-family: "Bold";   /*Can be any text*/
+  font-family: "Rajdhandi-Bold"; /*Can be any text*/
   src: local("Rajdhandi-Bold"),
     url("./Fonts/Rajdhani/Rajdhani-Bold.ttf") format("truetype");
 }
 
+
+@font-face {
+  font-family: "Comfortaa";
+  src: url("./Fonts/Comfortaa/static/Comfortaa-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Comfortaa";
+  src: url("./Fonts/Comfortaa/static/Comfortaa-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Comfortaa";
+  src: url("./Fonts/Comfortaa/static/Comfortaa-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Comfortaa";
+  src: url("./Fonts/Comfortaa/static/Comfortaa-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+
+
+
 .btn {
-  font-family: "Light"; 
+  font-family: "Rajdhandi-Light";
   display: inline-block;
   font-weight: 400;
   color: #212529;
@@ -33,22 +72,27 @@ body {background-color: grey;}
   font-size: 1rem;
   line-height: 1.5;
   border-radius: 0.25rem;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.btn-edit-bug {
+  outline: solid;
+  outline-color: black;
+  background-color: rgba(0, 0, 0, 0);
+  background: transparent;
 }
 
 .btn-primary {
   color: #fff;
   background-color: #007bff;
   border-color: #007bff;
-  font-family: Regular;
-
+  font-family: Rajdhandi-Regular;
 }
 
-.btn-add-bug{
+.btn-add-bug {
   bottom: 10px;
   left: 10px;
   position: absolute;
-
 }
 
 .add-bug-popup {
@@ -72,7 +116,7 @@ body {background-color: grey;}
 }
 
 .add-bug-popup label {
-  font-weight: bold;
+  font-weight: Rajdhandi-Bold;
   margin-bottom: 8px;
   display: block;
 }
@@ -80,7 +124,7 @@ body {background-color: grey;}
 .add-bug-popup .btn {
   width: 100%;
   padding: 12px;
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
   border: none;
   cursor: pointer;
@@ -91,46 +135,44 @@ body {background-color: grey;}
   background-color: #3e8e41;
 }
 
-.table-title{
-  font-family: "Bold"; 
+.table-title {
+  font-family: "Rajdhandi-Bold";
   position: sticky;
   width: 100vw;
   height: 50px;
   box-shadow: #212529;
 }
 
-.table{
+.table {
   position: absolute;
-  font-family: Regular;
+  font-family: Rajdhandi-Regular;
   table-layout: fixed;
   border: 0px solid black;
 }
 
-.table-unsolved{
+.table-unsolved {
   left: 1vw;
-  
 }
-.table-solved{
+.table-solved {
   right: 1vw;
 }
 
-.main-title{
-  font-family: "Bold"; 
+.main-title {
+  font-family: "Rajdhandi-Bold";
   font-size: 10vh;
-  position:static;
+  position: static;
   top: -10px;
   left: 40px;
   size: 15px;
-
 }
 
-.secondary-title{
+.secondary-title {
   border-color: black;
   border-bottom-width: 2px;
   border-bottom-style: solid;
-  font-family: "Bold";
+  font-family: "Rajdhandi-Bold";
   font-size: large;
-  position:static;
+  position: static;
   top: -10px;
   left: 10px;
   size: 10px;
@@ -143,7 +185,12 @@ td {
   white-space: nowrap;
   background-clip: text;
   -webkit-background-clip: text;
-  background-color: rgba(255, 255, 255, 1); /* set the background color of the text */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    1
+  ); /* set the background color of the text */
   color: transparent; /* make the text transparent */
   border-left: #212529;
   border-left-style: solid;
@@ -160,7 +207,7 @@ th {
   white-space: nowrap;
 }
 
-table{
+table {
   table-layout: fixed;
   width: 47vw;
 }
@@ -170,10 +217,22 @@ table{
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  background-color: #333;
+  background-color: rgba(0, 0, 0, 0);
   color: #fff;
-  height: 6vh;
-  position: sticky;
+  height: 2vh;
+  position: fixed;
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2);
+  border-bottom-left-radius: 25px;
+  padding: 20px;
+  top: 0;
+  width: 100vw;
+}
+
+.navbar-black {
+  color: black;
+}
+.navbar-white {
+  color: white;
 }
 
 .navbar a {
@@ -184,7 +243,7 @@ table{
 
 .navbar .navbar-brand {
   font-size: 10rem;
-  font-weight: bold;
+  font-weight: Rajdhandi-Bold;
 }
 
 .navbar .navbar-menu {
@@ -193,7 +252,6 @@ table{
   flex-wrap: nowrap; /* prevent elements from wrapping */
   justify-content: flex-start; /* align elements to the left */
 }
-
 
 /* Navigation Bar - Responsive */
 @media (max-width: 600px) {
@@ -204,5 +262,66 @@ table{
   }
 }
 
+.custom-shape-divider-bottom-1674795481 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
 
+.custom-shape-divider-bottom-1674795481 svg {
+  position: relative;
+  display: block;
+  width: calc(121% + 1.3px);
+  height: 266px;
+}
 
+.custom-shape-divider-bottom-1674795481 .shape-fill {
+  fill: #ffffff;
+}
+
+.bugImage {
+  right: 0px;
+  top: -50px;
+  position: absolute;
+  image-rendering: optimizeSpeed;
+  opacity: 0.1;
+  max-width: 130%;
+  max-height: 130%;
+}
+
+.fontC{
+  font-family: Comfortaa;
+  font-weight: bold;
+  right: 1vw;
+}
+.computerImage{
+  left: 7vw;
+  position: absolute;
+  image-rendering: optimizeSpeed;
+  z-index: -1;
+  bottom: -8vh;
+  width: 28%;
+  height: 50%;
+  transform: rotate(28deg);
+
+}
+
+.FormatTitle{
+  text-align: right;
+  width: 50vw;
+  position: absolute;
+  right: 10px;
+}
+
+.whitePage{
+  background-color: white;
+  height: 110vh;
+  width: 100vw;
+  position: absolute;
+  top: 98vh;
+  z-index: 2;
+}

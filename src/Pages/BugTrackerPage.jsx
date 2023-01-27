@@ -1,22 +1,24 @@
 import React, { useState } from "react";
 import BugList from "../Components/BugList";
 import AddBugPopup from "../Components/AddBugPopup";
-import EditBugPopup from "../Components/EditBugPopup";
+import bugImage from '../Images/ImageOfBug.png';
+ 
 
-const HomePage = () => {
+
+const BugTrackerPage = () => {
   const [bugs, setBugs] = useState([
     {
-      name: "Bug 1",
+      name: "Edit Button",
       reportedBy: "User 1",
-      description: "not closing",
+      description: "Edit Button Lacking Function",
       createdDate: "01/01/2022",
       status: "Open",
-      severity: "Low",
+      severity: "High",
     },
     {
-      name: "Bug 2",
+      name: "NavBar Links",
       reportedBy: "User 2",
-      description: "not closing",
+      description: "Website needs refresing",
       createdDate: "02/01/2022",
       status: "Closed",
       severity: "Medium",
@@ -28,6 +30,7 @@ const HomePage = () => {
   const [selectedBug, setSelectedBug] = useState(null);
 
   const handleAddBug = (newBug) => {
+    setAddBugOpen((prevState) => !prevState);
     setBugs((prevBugs) => [...prevBugs, newBug]);
   };
 
@@ -60,6 +63,7 @@ const HomePage = () => {
   };
 
   return (
+    <>
     <div>
       <div className="main-title">Bug Tracker</div>
       {addBugOpen && (
@@ -88,7 +92,9 @@ const HomePage = () => {
         Submit Bug
       </button>
     </div>
+    <img className="bugImage" src={require('../Images/ImageOfBug.png')} alt="A bug" />
+    </>
   );
 };
 
-export default HomePage;
+export default BugTrackerPage;

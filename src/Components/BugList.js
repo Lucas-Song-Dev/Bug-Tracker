@@ -15,8 +15,8 @@ const BugList = ({ bugs, onEditBug, onResolveBug }) => {
       <table>
         <thead>
           <tr>
-            <th></th>
-            <th>Name</th>
+            <th style={{width: "2.5vw"}}></th>
+            <th >Name</th>
             <th style={{width: "12vw"}}>Description</th>
             <th>Reported</th>
             <th>Created date</th>
@@ -28,9 +28,9 @@ const BugList = ({ bugs, onEditBug, onResolveBug }) => {
         <tbody>
           {bugs.map((bug) => (
             <tr key={bug.name}>
-              <td><button onClick={() => handleEditBug(bug)}> edit </button></td>
+              <td><button onClick={() => handleEditBug(bug)} /*className="btn btn-primary"*/ > {String.fromCharCode(62)} </button></td>
               <td>{bug.name}</td>
-              <td style={{width: "12vw"}}>{bug.description}</td>
+              <td>{bug.description}</td>
               <td>{bug.reportedBy}</td>
               <td>{bug.createdDate}</td>
               <td>{bug.status}</td>
