@@ -1,6 +1,7 @@
 body {
   background-color: grey;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -218,7 +219,6 @@ table {
   align-items: center;
   padding: 1rem;
   background-color: rgba(0, 0, 0, 0);
-  color: #fff;
   height: 2vh;
   position: fixed;
   box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2);
@@ -226,19 +226,26 @@ table {
   padding: 20px;
   top: 0;
   width: 100vw;
+  z-index: 100;
 }
 
-.navbar-black {
-  color: black;
-}
-.navbar-white {
-  color: white;
-}
+
 
 .navbar a {
-  color: #fff;
+  color: black;
   text-decoration: none;
   margin-right: 1rem;
+}
+
+.navbar-black a{
+  color: black ;
+  transition: color 0.7s ease;
+
+}
+.navbar-white a{
+  color: white;
+  transition: color 0.7s ease;
+
 }
 
 .navbar .navbar-brand {
@@ -307,17 +314,36 @@ table {
   width: 28%;
   height: 50%;
   transform: rotate(28deg);
+  animation: bob 2.4s ease-in-out infinite;
+}
+@keyframes bob {
+  0% {
+    transform: rotate(28deg);
 
+    bottom: -8vh;
+  }
+  50% {
+    transform: rotate(25deg);
+
+    bottom: -10vh;
+  }
+  100% {
+    transform: rotate(28deg);
+
+    bottom: -8vh;
+  }
 }
 
 .FormatTitle{
   text-align: right;
   width: 50vw;
   position: absolute;
-  right: 10px;
+  right: 1vw;
+  top: 18vh;
+  z-index: 2;
 }
 
-.whitePage{
+.secondPage{
   background-color: white;
   height: 110vh;
   width: 100vw;
@@ -325,3 +351,65 @@ table {
   top: 98vh;
   z-index: 2;
 }
+
+.thirdPage{
+  background-color: gray;
+  height: 110vh;
+  width: 100vw;
+  position: absolute;
+  top: 198vh;
+  z-index: 0;
+}
+
+.custom-shape-divider-top-1674805785 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1674805785 svg {
+  position: relative;
+  display: block;
+  width: calc(154% + 1.3px);
+  height: 303px;
+}
+
+.custom-shape-divider-top-1674805785 .shape-fill {
+  fill: #FFFFFF;
+}
+
+.custom-shape-divider-top-1674807117 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1674807117 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 76px;
+}
+
+.custom-shape-divider-top-1674807117 .shape-fill {
+  fill: white;
+}
+
+.topLayer{
+  z-index: 10;
+}
+
+
+.pageTwoTransitionOut{
+  position: relative;
+  top: 205.5vh;
+  z-index: 10;
+  fill: white;
+}
+

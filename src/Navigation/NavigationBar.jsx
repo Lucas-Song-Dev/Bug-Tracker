@@ -1,24 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 
-function NavigationBar() {
-  const [color, setColor] = useState('white');
-
-  useEffect(() => {
-    function handleScroll() {
-      if (window.scrollY >= 100) {
-        setColor('black');
-      } else {
-        setColor('white');
-      }
-    }
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+function NavigationBar({navbarColor}) {
   const [activeLink, setActiveLink] = useState('home');
   const location = useLocation();
 
@@ -30,13 +13,14 @@ function NavigationBar() {
     setActiveLink(link);
   };
 
-  const extraClassName = (color === "white")
-    ? "navbar-white"
-    : "navbar-black";
+  console.log(navbarColor);
+
+
 
   return (
-    <nav className={`navbar ${extraClassName}`} >
-      <div className='navbar-menu'>
+    
+    <nav className={`navbar ${navbarColor}`} >
+      <div className={`navbar-menu  ${navbarColor} ` }>
         <Link className={activeLink === '/Bug-Tracker/' ? 'active' : ''} onClick={() => handleClick('/')} to="/Bug-Tracker/">Home</Link>
         <Link className={activeLink === '/Bug-Tracker/about' ? 'active' : ''} onClick={() => handleClick('/about')} to="/Bug-Tracker/about">About</Link>
         <Link className={activeLink === '/Bug-Tracker/contact' ? 'active' : ''} onClick={() => handleClick('/contact')} to="/Bug-Tracker/contact">Contact</Link>

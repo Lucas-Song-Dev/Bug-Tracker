@@ -35,7 +35,7 @@ display: inline-block;
 span{
   ${fontFamily}
   font-family: "Comfortaa";
-  color: white;
+  color: black;
   opacity: 0;
   animation-name: ${animationTitle};
   animation-duration: 5s;
@@ -46,13 +46,11 @@ span{
   
   position: fixed;
   width: 10vw;
-  bottom: 46.4vh;
   text-align: center;
   font-size: 10vw;
-  z-index: -1;
+  z-index: 3;
   user-select: none;
   overflow: hidden;
-  right: 1vw;
 }
 span:nth-child(1){
   animation-delay:0.2s;
