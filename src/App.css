@@ -1,5 +1,5 @@
 body {
-  background-color: grey;
+  background-color: #FAB974;
   overflow-y: auto;
   overflow-x: hidden;
 }
@@ -78,22 +78,25 @@ body {
 }
 .btn-edit-bug {
   outline: solid;
-  outline-color: black;
+  outline: rgba(0, 0, 0, 0);
   background-color: rgba(0, 0, 0, 0);
   background: transparent;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  width: 2vw;
 }
 
 .btn-primary {
   color: #fff;
-  background-color: #007bff;
-  border-color: #007bff;
+  background-color: #212529;
+  border-color: white;
   font-family: Rajdhandi-Regular;
+  bottom: 30px;
 }
 
 .btn-add-bug {
-  bottom: 10px;
   left: 10px;
-  position: absolute;
+  top: 93vh;
+  position: sticky;
 }
 
 .add-bug-popup {
@@ -106,6 +109,8 @@ body {
   box-shadow: 0px 0px 100vw #ccc;
   z-index: 100; /* make sure the popup is above other elements */
 }
+
+
 
 .add-bug-popup input,
 .add-bug-popup textarea {
@@ -149,22 +154,65 @@ body {
   font-family: Rajdhandi-Regular;
   table-layout: fixed;
   border: 0px solid black;
+  box-shadow: 100px 0px 100vw #ccc;
+  width: 150vw;
+  padding-left: 1vw;
+  background-color: rgba(255, 255, 255, 0.2);
+  top: 10vh;
+  z-index: 1;
+}
+select {
+  /* Remove the outline */
+  background-color: transparent;
+  text-align: center;
+  padding-left: 1%;
+  padding-right: 1%;
+  width: 98%;
+  outline-style: none;
+  outline-width: 0px;
+  outline: none;
 }
 
-.table-unsolved {
-  left: 1vw;
+
+#severity {
+  /* other styles */
+  background-color: transparent;
+  text-align: center;
+  padding-left: 1%;
+  padding-right: 1%;
+  width: 98%;
+  outline-style: none;
+  outline-width: 0px;
+  outline: none;
+  z-index: 100;
 }
-.table-solved {
-  right: 1vw;
+
+#severity option {
+  /* other styles */
 }
+
+#severity option.low {
+  color: green;
+  height: 3vh;
+}
+
+#severity option.medium {
+  color: orange;
+}
+
+#severity option.high {
+  color: red;
+}
+
 
 .main-title {
   font-family: "Rajdhandi-Bold";
   font-size: 10vh;
-  position: static;
-  top: -10px;
-  left: 40px;
+  position: absolute;
+  top: 50vh;
+  left: 30vw;
   size: 15px;
+  z-index: 0;
 }
 
 .secondary-title {
@@ -187,15 +235,18 @@ td {
   background-clip: text;
   -webkit-background-clip: text;
   background-color: rgba(
-    255,
-    255,
-    255,
+    0,
+    0,
+    0,
     1
   ); /* set the background color of the text */
   color: transparent; /* make the text transparent */
   border-left: #212529;
   border-left-style: solid;
   border-left-width: 1px;
+  border-bottom: #212529;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
   padding-left: 5px;
   width: 9vw;
   word-break: break-word;
@@ -210,7 +261,8 @@ th {
 
 table {
   table-layout: fixed;
-  width: 47vw;
+  width: 100vw;
+  z-index: 1;
 }
 
 .navbar {
@@ -218,7 +270,7 @@ table {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgba(255, 255, 255, 0.9);
   height: 2vh;
   position: fixed;
   box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2);
@@ -233,6 +285,7 @@ table {
 
 .navbar a {
   color: black;
+  background-color: rgba(0, 0, 0, 0);
   text-decoration: none;
   margin-right: 1rem;
 }
@@ -246,6 +299,10 @@ table {
   color: white;
   transition: color 0.7s ease;
 
+}
+
+.navbar-white{
+  background-color: rgba(0, 0, 0, 0) !important;
 }
 
 .navbar .navbar-brand {
@@ -298,6 +355,7 @@ table {
   opacity: 0.1;
   max-width: 130%;
   max-height: 130%;
+  z-index: -1;
 }
 
 .fontC{
@@ -345,7 +403,7 @@ table {
 
 .secondPage{
   background-color: white;
-  height: 110vh;
+  height: 130vh;
   width: 100vw;
   position: absolute;
   top: 98vh;
@@ -354,7 +412,7 @@ table {
 
 .thirdPage{
   background-color: gray;
-  height: 110vh;
+  height: 210vh;
   width: 100vw;
   position: absolute;
   top: 198vh;
@@ -408,8 +466,39 @@ table {
 
 .pageTwoTransitionOut{
   position: relative;
-  top: 205.5vh;
+  top: 227.3vh;
   z-index: 10;
   fill: white;
+}
+
+@keyframes strech {
+  0% {
+    width: 200vw;
+    left: 100vw;
+    height: 10px;
+    top: -8vh;
+    position: absolute;
+  }
+  50% {
+    width: 150vw;
+
+    top: -10vh;
+  }
+  100% {
+    width: 100vw;
+
+    top: -8vh;
+  }
+}
+
+.topFirstElement{
+  animation: strech 2.4s ease-in-out infinite;
+  fill: white;
+}
+
+.bugTrackerPage{
+  background-color: white;
+  width: 100vw;
+  height: 300vh;
 }
 

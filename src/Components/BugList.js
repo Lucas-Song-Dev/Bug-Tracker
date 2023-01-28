@@ -1,13 +1,21 @@
 import React, { useState } from "react";
 
-const BugList = ({ bugs, onEditBug, onResolveBug }) => {
-
+const BugList = ({ bugs, onEditBug, onOpenEditBug, onResolveBug }) => {
   const handleResolveBug = (id) => {
     onResolveBug(id);
   };
 
-  const handleEditBug = (id) => {
-    onEditBug(id);
+  const handleOpenEditBug = (e) => {
+    onOpenEditBug(e);
+  };
+
+  const handleChangeStatus = (e, id) => {
+    onEditBug(id, 1, { status: e.target.value });
+  };
+
+  const handleChangeSeverity = (e, id) => {
+    console.log({ severity: e.target.value });
+    onEditBug(id, 2, { severity: e.target.value });
   };
 
   return (
@@ -15,9 +23,9 @@ const BugList = ({ bugs, onEditBug, onResolveBug }) => {
       <table>
         <thead>
           <tr>
-            <th style={{width: "2.5vw"}}></th>
-            <th >Name</th>
-            <th style={{width: "12vw"}}>Description</th>
+            <th style={{ width: "3vw" }}></th>
+            <th>Name</th>
+            <th style={{ width: "20vw" }}>Description</th>
             <th>Reported</th>
             <th>Created date</th>
             <th>Status</th>
@@ -27,16 +35,53 @@ const BugList = ({ bugs, onEditBug, onResolveBug }) => {
         </thead>
         <tbody>
           {bugs.map((bug) => (
-            <tr key={bug.name}>
-              <td><button onClick={() => handleEditBug(bug)} /*className="btn btn-primary"*/ > {String.fromCharCode(62)} </button></td>
+            <tr key={bug.id}>
+              <td>
+                <button
+                  onClick={() => handleOpenEditBug(bug)}
+                  className="btn btn-edit-bug"
+                >
+                  {" "}
+                  ▶
+                </button>
+              </td>
               <td>{bug.name}</td>
               <td>{bug.description}</td>
               <td>{bug.reportedBy}</td>
               <td>{bug.createdDate}</td>
-              <td>{bug.status}</td>
-              <td>{bug.severity}</td>
               <td>
-              {<button onClick={() => handleResolveBug(bug)}>{bug.status === 'Open' ? 'resolve' : 're-open'}</button> }
+                <select
+                  value={bug.status}
+                  onChange={(e) => handleChangeStatus(e, bug.id)}
+                >
+                  <option value="Open">Open</option>
+                  <option value="In Progress">In Progress</option>
+                  <option value="Closed">Closed</option>
+                </select>
+              </td>
+              <td>
+                <select
+                  value={bug.severity}
+                  onChange={(e) => handleChangeSeverity(e, bug.id)}
+                  id="severity"
+                >
+                  <option class="low" value="low">
+                    Low
+                  </option>
+                  <option class="medium" value="medium">
+                    Medium
+                  </option>
+                  <option class="high" value="high">
+                    High
+                  </option>
+                </select>
+              </td>{" "}
+              <td>
+                {
+                  <button onClick={() => handleResolveBug(bug.id)}>
+                    {bug.status === "Open" ? "resolve" : "re-open"}
+                  </button>
+                }
               </td>
             </tr>
           ))}

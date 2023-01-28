@@ -13,10 +13,6 @@ function NavigationBar({navbarColor}) {
     setActiveLink(link);
   };
 
-  console.log(navbarColor);
-
-
-
   return (
     
     <nav className={`navbar ${navbarColor}`} >

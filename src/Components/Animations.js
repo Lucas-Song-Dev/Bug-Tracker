@@ -2,11 +2,12 @@ import React, { Component, useState } from "react";
 import styled, { keyframes } from "styled-components";
 
 function TitleAnimation() {
-  const TitleArray = "Lucas Song".split("");
+  const TitleArray = "LUCAS SONG".split("");
+  const CreatedByArray = "DESIGNED".split("");
     return (
       <>
         <WrapperTitle>
-        {TitleArray.map((item, index) => (
+        {CreatedByArray.map((item, index) => (
             <span key={index}>{item} </span>
           ))}
         </WrapperTitle>

@@ -1,22 +1,30 @@
 import React, { useState } from "react";
 
-const EditBugPopup = ({ onEditBug }) => {
-  const [name, setName] = useState("");
-  const [description, setDescription] = useState("");
-  const [severity, setSeverity] = useState("Low");
-  const [status, setStatus] = useState("Open");
-  const [reportedBy, setReportedBy] = useState("Self");
-  const [createdDate, setCreatedDate] = useState(
-    new Date().toISOString().slice(0, 10)
-  );
+const EditBugPopup = ({ bug, onEditBug }) => {
+  const [name, setName] = useState(bug.name);
+const [description, setDescription] = useState(bug.description);
+const [severity, setSeverity] = useState(bug.severity);
+const [status, setStatus] = useState(bug.status);
+const [reportedBy, setReportedBy] = useState(bug.reportedBy);
+const [createdDate, setCreatedDate] = useState(bug.createdDate);
 
-  const handleEditBug = (e) => {
-    e.preventDefault();
-    onEditBug({ name, description, reportedBy, severity, status, createdDate });
+const handleEditBug = (e) => {
+  e.preventDefault();
+  const updatedBug = {
+      id: bug.id,
+      name: name,
+      description: description,
+      severity: severity,
+      status: status,
+      reportedBy: reportedBy,
+      createdDate: createdDate
   };
+  onEditBug(bug.id , 0 , updatedBug);
+};
+
 
   return (
-    <div className="edit-bug-popup">
+    <div className="add-bug-popup">
       <form onSubmit={handleEditBug}>
         <div className="form-group">
           <label>Bug Name</label>
@@ -70,10 +78,7 @@ const EditBugPopup = ({ onEditBug }) => {
             onChange={(e) => setCreatedDate(e.target.value)}
           />
         </div>
-        <button
-          type="submit"
-          className="btn btn-primary"
-        >
+        <button type="submit" className="btn btn-primary">
           Edit Bug
         </button>
       </form>

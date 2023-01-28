@@ -1,4 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Favicon from "react-favicon";
+
 import HomePage from "./Pages/HomePage";
 import NavigationBar from "./Navigation/NavigationBar";
 import AboutPage from "./Pages/AboutPage";
@@ -19,7 +21,7 @@ function App() {
   }, []);
 
   function handleScroll() {
-    if (window.scrollY > 5000) {
+    if (window.scrollY > 1100) {
       setNavbarColor("navbar-white");
     } else {
       setNavbarColor("navbar-black");
@@ -27,10 +29,9 @@ function App() {
   }
   return (
     <>
+      <Favicon url={"./Images/favicon-32x32.png"} />
       <BrowserRouter>
-        <NavigationBar
-          navbarColor={navbarColor}
-        />{" "}
+        <NavigationBar navbarColor={navbarColor} />{" "}
         <Routes>
           <Route path="/Bug-Tracker/" element={<HomePage />} />
           <Route path="/Bug-Tracker/about" element={<AboutPage />} />

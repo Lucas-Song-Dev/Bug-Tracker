@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 
 const AddBugPopup = ({ onAddBug }) => {
   const [name, setName] = useState("");
@@ -12,7 +13,15 @@ const AddBugPopup = ({ onAddBug }) => {
 
   const handleAddBug = (e) => {
     e.preventDefault();
-    onAddBug({ name, description,reportedBy, severity, status, createdDate });
+    onAddBug({
+      name,
+      description,
+      reportedBy,
+      severity,
+      status,
+      createdDate,
+      id: uuidv4(),
+    });
   };
 
   return (
@@ -70,10 +79,7 @@ const AddBugPopup = ({ onAddBug }) => {
             onChange={(e) => setCreatedDate(e.target.value)}
           />
         </div>
-        <button
-          type="submit"
-          className="btn btn-primary"
-        >
+        <button type="submit" className="btn btn-primary">
           Add Bug
         </button>
       </form>
