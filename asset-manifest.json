@@ -1,7 +1,8 @@
 {
   "files": {
-    "main.css": "/Bug-Tracker/static/css/main.5c2b94ae.css",
-    "main.js": "/Bug-Tracker/static/js/main.f2367acb.js",
+    "main.css": "/Bug-Tracker/static/css/main.1bf76996.css",
+    "main.js": "/Bug-Tracker/static/js/main.b5b5c359.js",
+    "static/media/AstroPurple.png": "/Bug-Tracker/static/media/AstroPurple.03f3e6fa84ef4507f1a5.png",
     "static/media/Rajdhani-Bold.ttf": "/Bug-Tracker/static/media/Rajdhani-Bold.a5a831c1b8c8eb1b83ff.ttf",
     "static/media/Rajdhani-Light.ttf": "/Bug-Tracker/static/media/Rajdhani-Light.7f948ddb3029f1193092.ttf",
     "static/media/Rajdhani-Regular.ttf": "/Bug-Tracker/static/media/Rajdhani-Regular.148606c1eb703f6e597a.ttf",
@@ -12,11 +13,11 @@
     "static/media/Comfortaa-Light.ttf": "/Bug-Tracker/static/media/Comfortaa-Light.2d79c8b673318d831c9b.ttf",
     "static/media/Comfortaa-Bold.ttf": "/Bug-Tracker/static/media/Comfortaa-Bold.059cc3e0c5d00a88354f.ttf",
     "index.html": "/Bug-Tracker/index.html",
-    "main.5c2b94ae.css.map": "/Bug-Tracker/static/css/main.5c2b94ae.css.map",
-    "main.f2367acb.js.map": "/Bug-Tracker/static/js/main.f2367acb.js.map"
+    "main.1bf76996.css.map": "/Bug-Tracker/static/css/main.1bf76996.css.map",
+    "main.b5b5c359.js.map": "/Bug-Tracker/static/js/main.b5b5c359.js.map"
   },
   "entrypoints": [
-    "static/css/main.5c2b94ae.css",
-    "static/js/main.f2367acb.js"
+    "static/css/main.1bf76996.css",
+    "static/js/main.b5b5c359.js"
   ]
 }
