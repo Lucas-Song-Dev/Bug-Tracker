@@ -1,5 +1,5 @@
 body {
-  background-color: #FAB974;
+  background-color: #CBC3E3;
   overflow-y: auto;
   overflow-x: hidden;
 }
@@ -157,8 +157,8 @@ body {
   box-shadow: 100px 0px 100vw #ccc;
   width: 150vw;
   padding-left: 1vw;
-  background-color: rgba(255, 255, 255, 0.2);
-  top: 10vh;
+  background-color: rgba(255, 255, 255, 1);
+  top: 9vh;
   z-index: 1;
 }
 select {
@@ -192,12 +192,11 @@ select {
 }
 
 #severity option.low {
-  color: green;
-  height: 3vh;
+  color: green !important;
 }
 
 #severity option.medium {
-  color: orange;
+  color: orange !important;
 }
 
 #severity option.high {
@@ -265,30 +264,39 @@ table {
   z-index: 1;
 }
 
+
+.HomeImage{
+  padding-top: 45px;
+  padding-left: -10px;
+  position: "absolute" ; 
+  -webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: drop-shadow(5px 5px 5px #222);
+}
+
+
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  background-color: rgba(255, 255, 255, 0.9);
+  background: linear-gradient(to left, rgba(0,0,0,0) 50%, rgba(255, 255, 255, 0) 100%);
   height: 2vh;
-  position: fixed;
-  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2);
+  position: absolute;
+  box-shadow: 0 3px 5px -10px rgba(0, 0, 0, 0.2);
   border-bottom-left-radius: 25px;
   padding: 20px;
   top: 0;
   width: 100vw;
   z-index: 100;
+  text-align: left;
 }
+
 
 
 
 .navbar a {
   color: black;
-  background-color: rgba(0, 0, 0, 0);
   text-decoration: none;
   margin-right: 1rem;
 }
+
+
 
 .navbar-black a{
   color: black ;
@@ -301,29 +309,64 @@ table {
 
 }
 
-.navbar-white{
-  background-color: rgba(0, 0, 0, 0) !important;
-}
-
 .navbar .navbar-brand {
   font-size: 10rem;
   font-weight: Rajdhandi-Bold;
 }
 
-.navbar .navbar-menu {
+
+.navbar-menu{
   display: flex;
+  justify-content: left;
   align-items: center;
-  flex-wrap: nowrap; /* prevent elements from wrapping */
-  justify-content: flex-start; /* align elements to the left */
+  height: 100%;
+  transition: all 2s;
+
 }
 
-/* Navigation Bar - Responsive */
-@media (max-width: 600px) {
-  .navbar .navbar-menu {
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 1rem;
+.navbar-menu a:hover {
+  border-radius: 5px;
+
+  animation: scaleUp 0.3s ease-out forwards;
+
+  display: inline-block;
+  justify-content: left;
+  align-items: center;
+
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+
+
+}
+
+.navbar-menu-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+
+@keyframes scaleUp {
+  to {
+    transform: scale(1.05);
   }
+}
+
+.secondPageText{
+  width: 50vw;
+  font-family: Comfortaa;
+  font-weight: bold;
+  top: 50vh;
+  position: absolute;
+  left: 50px;
+}
+
+.secondPageTitle{
+  top: 20vh;
+  font-family: Rajdhandi-Regular;
+  font-size: 10vh;
+  left: 50px;
+  width: 400px;
+  position: absolute;
 }
 
 .custom-shape-divider-bottom-1674795481 {
@@ -358,6 +401,60 @@ table {
   z-index: -1;
 }
 
+.astroPurpleImage {
+  right: 10vw;
+  top: 20vh;
+  width: 150px;
+  height: 330px;
+  border: black;
+  border-color: black;
+  border-radius: 5px;
+  border-style: solid;
+  box-shadow: 20px 30px 16px 0px rgba(0, 0, 0, 0.2);
+  width: 25vw;
+  position: absolute;
+  z-index: 2;
+  animation: scaleDown 0.5s ease-out forwards;
+}
+
+.astroPurpleImage:hover{
+  animation: scaleUp 0.5s ease-out forwards;
+}
+
+
+@keyframes scaleDown {
+  from {
+    transform: scale(1.05);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.arrow{
+  width: 12vh;
+  position: absolute;
+  top: -100px;
+  animation: blink 3s ease-in-out infinite;
+}
+
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.arrow:hover {
+}
+
+
 .fontC{
   font-family: Comfortaa;
   font-weight: bold;
@@ -373,6 +470,8 @@ table {
   height: 50%;
   transform: rotate(28deg);
   animation: bob 2.4s ease-in-out infinite;
+  -webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: drop-shadow(5px 5px 5px #222);
 }
 @keyframes bob {
   0% {
@@ -401,9 +500,18 @@ table {
   z-index: 2;
 }
 
+.introText{
+  z-index: 2;
+  text-align: right;
+  font-family: Rajdhandi-regular ; 
+  font-Size: 4vh;
+  width: 40vw;
+}
+
+
 .secondPage{
   background-color: white;
-  height: 130vh;
+  height: 180vh;
   width: 100vw;
   position: absolute;
   top: 98vh;
@@ -411,8 +519,8 @@ table {
 }
 
 .thirdPage{
-  background-color: gray;
-  height: 210vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 130vh;
   width: 100vw;
   position: absolute;
   top: 198vh;
@@ -466,7 +574,7 @@ table {
 
 .pageTwoTransitionOut{
   position: relative;
-  top: 227.3vh;
+  top: 277.3vh;
   z-index: 10;
   fill: white;
 }

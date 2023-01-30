@@ -6,6 +6,7 @@ import NavigationBar from "./Navigation/NavigationBar";
 import AboutPage from "./Pages/AboutPage";
 import ContactPage from "./Pages/ContactPage";
 import BugTrackerPage from "./Pages/BugTrackerPage";
+import CalendarPage from "./Pages/CalenderPage";
 import { useEffect, useState } from "react";
 
 import "./App.css";
@@ -37,6 +38,7 @@ function App() {
           <Route path="/Bug-Tracker/about" element={<AboutPage />} />
           <Route path="/Bug-Tracker/contact" element={<ContactPage />} />
           <Route path="/Bug-Tracker/bugTracker" element={<BugTrackerPage />} />
+          <Route path="/Bug-Tracker/CalendarPage" element={<CalendarPage />} />
           {/* <Route path="/users/:id" element={<UserPage />} /> */}
         </Routes>
       </BrowserRouter>

@@ -23,11 +23,11 @@ const BugList = ({ bugs, onEditBug, onOpenEditBug, onResolveBug }) => {
       <table>
         <thead>
           <tr>
-            <th style={{ width: "3vw" }}></th>
+            <th style={{ width: "3.2vw" }}></th>
             <th>Name</th>
             <th style={{ width: "20vw" }}>Description</th>
             <th>Reported</th>
-            <th>Created date</th>
+            <th>Created</th>
             <th>Status</th>
             <th>Severity</th>
             <th></th>

@@ -12,7 +12,8 @@ const BugTrackerPage = () => {
       reportedBy: "User 1",
       description: "Edit Button Lacking Function",
       createdDate: "2023-01-26",
-      status: "Open",
+      finishedDate: "2023-01-26",
+      status: "Closed",
       severity: "High",
       id: uuidv4(),
     },
@@ -21,7 +22,18 @@ const BugTrackerPage = () => {
       reportedBy: "User 2",
       description: "Website needs refresing",
       createdDate: "2023-01-26",
+      finishedDate: "2023-01-27",
       status: "Closed",
+      severity: "Medium",
+      id: uuidv4(),
+    },
+    {
+      name: "Homepage transitions",
+      reportedBy: "Self",
+      description: "Unable to animate waves",
+      createdDate: "2023-01-29",
+      finishedDate: "2023-01-30",
+      status: "Open",
       severity: "Medium",
       id: uuidv4(),
     },
@@ -82,7 +94,6 @@ const BugTrackerPage = () => {
   return (
     <>
       <div className="bugTrackerPage">
-        <div className="main-title">Bug Tracker</div>
         {addBugOpen && (
           <AddBugPopup onClose={handleAddBugOpen} onAddBug={handleAddBug} />
         )}
@@ -98,6 +109,7 @@ const BugTrackerPage = () => {
             onEditBug = {handleEditBug}
           />
         </div>
+        <div className="main-title">Bug Tracker</div>
         <button
           className="btn btn-primary btn-add-bug"
           onClick={handleAddBugOpen}

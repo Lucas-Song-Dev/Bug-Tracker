@@ -10,6 +10,7 @@ function HomePage() {
       />
       <div className="FormatTitle">
         <TitleAnimation />
+        <div className="introText">Welcome to my bug tracking platform! If you have any suggestions or tips, please reach out at Lucas02.song@gmail.com. I value any feedback and look forward to hearing from you!</div>
       </div>
       <div
         class="custom-shape-divider-bottom-1674795481"
@@ -40,11 +41,9 @@ function HomePage() {
           </svg>
         </div>
       </div>
-      <div className="secondPage"></div>
       <div
         class="custom-shape-divider-top-1674805785"
-        style={{ width: "120vw", left: "-5vw" }}
-
+        style={{ width: "120vw", left: "-5vw", zIndex: "1" }}
       >
         <svg
           data-name="Layer 1"
@@ -70,9 +69,24 @@ function HomePage() {
           ></path>
         </svg>
       </div>
+      <div className="secondPage">
+      <img
+          className="arrow"
+          src={require("../Images/downArrow.png")}
+          alt="An Arrow"
+        />
+        <div className="secondPageTitle">Streamline Your Bug Tracking</div>
+        <div className="secondPageText">Bug tracking is an essential component of software development, helping you to keep track of issues and bugs as they arise, prioritize them, and work to resolve them efficiently and effectively. Our bug tracker is designed to make the process as simple and straightforward as possible, offering an intuitive interface and a range of powerful features to help you manage your bugs with ease.</div>
+        <img
+          className="astroPurpleImage"
+          src={require("../Images/AstroPurple.png")}
+          alt="An Astro"
+        />
+      </div>
       <div
         class="custom-shape-divider-top-1674807117"
         className="pageTwoTransitionOut"
+        style={{zIndex: "1"}}
       >
         <svg
           data-name="Layer 1"
