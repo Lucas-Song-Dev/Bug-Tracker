@@ -1,24 +1,26 @@
 {
   "files": {
-    "main.css": "/Bug-Tracker/static/css/main.cc281c2a.css",
-    "main.js": "/Bug-Tracker/static/js/main.1e16852a.js",
-    "static/media/Rajdhani-Bold.ttf": "/Bug-Tracker/static/media/Rajdhani-Bold.a5a831c1b8c8eb1b83ff.ttf",
+    "main.css": "/Bug-Tracker/static/css/main.4de3d6a4.css",
+    "main.js": "/Bug-Tracker/static/js/main.3863f774.js",
+    "static/media/Rajdhani-SemiBold.ttf": "/Bug-Tracker/static/media/Rajdhani-SemiBold.7d928c2670caba5b9dd6.ttf",
     "static/media/Rajdhani-Light.ttf": "/Bug-Tracker/static/media/Rajdhani-Light.7f948ddb3029f1193092.ttf",
     "static/media/Rajdhani-Regular.ttf": "/Bug-Tracker/static/media/Rajdhani-Regular.148606c1eb703f6e597a.ttf",
     "static/media/AstroProfileCircle.png": "/Bug-Tracker/static/media/AstroProfileCircle.d75f4a3e60cb04edd94f.png",
     "static/media/ComputerSmile.png": "/Bug-Tracker/static/media/ComputerSmile.32456ec8b7c760b6695f.png",
     "static/media/AstroPurple.png": "/Bug-Tracker/static/media/AstroPurple.6a59abd6260a83225222.png",
     "static/media/ImageOfBug.png": "/Bug-Tracker/static/media/ImageOfBug.88fcab81ff2f11aefdc0.png",
+    "static/media/WorkSans-Medium.ttf": "/Bug-Tracker/static/media/WorkSans-Medium.f1dd9ac4126d93c6baeb.ttf",
     "static/media/Comfortaa-SemiBold.ttf": "/Bug-Tracker/static/media/Comfortaa-SemiBold.47b7aa559e6731360445.ttf",
     "static/media/Comfortaa-Regular.ttf": "/Bug-Tracker/static/media/Comfortaa-Regular.051d690872878482e7e7.ttf",
     "static/media/Comfortaa-Light.ttf": "/Bug-Tracker/static/media/Comfortaa-Light.2d79c8b673318d831c9b.ttf",
     "static/media/Comfortaa-Bold.ttf": "/Bug-Tracker/static/media/Comfortaa-Bold.059cc3e0c5d00a88354f.ttf",
+    "static/media/lowPolyGrid.svg": "/Bug-Tracker/static/media/lowPolyGrid.a4361e69a2067905c8b1fcb84f0729e3.svg",
     "index.html": "/Bug-Tracker/index.html",
-    "main.cc281c2a.css.map": "/Bug-Tracker/static/css/main.cc281c2a.css.map",
-    "main.1e16852a.js.map": "/Bug-Tracker/static/js/main.1e16852a.js.map"
+    "main.4de3d6a4.css.map": "/Bug-Tracker/static/css/main.4de3d6a4.css.map",
+    "main.3863f774.js.map": "/Bug-Tracker/static/js/main.3863f774.js.map"
   },
   "entrypoints": [
-    "static/css/main.cc281c2a.css",
-    "static/js/main.1e16852a.js"
+    "static/css/main.4de3d6a4.css",
+    "static/js/main.3863f774.js"
   ]
 }
