@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Bug-Tracker/static/css/main.1fb4bf59.css",
-    "main.js": "/Bug-Tracker/static/js/main.2e3522c1.js",
+    "main.js": "/Bug-Tracker/static/js/main.d4aa6c37.js",
     "static/media/Rajdhani-SemiBold.ttf": "/Bug-Tracker/static/media/Rajdhani-SemiBold.7d928c2670caba5b9dd6.ttf",
     "static/media/Rajdhani-Light.ttf": "/Bug-Tracker/static/media/Rajdhani-Light.7f948ddb3029f1193092.ttf",
     "static/media/Rajdhani-Regular.ttf": "/Bug-Tracker/static/media/Rajdhani-Regular.148606c1eb703f6e597a.ttf",
@@ -18,10 +18,10 @@
     "static/media/lowPolyGrid.svg": "/Bug-Tracker/static/media/lowPolyGrid.a4361e69a2067905c8b1fcb84f0729e3.svg",
     "index.html": "/Bug-Tracker/index.html",
     "main.1fb4bf59.css.map": "/Bug-Tracker/static/css/main.1fb4bf59.css.map",
-    "main.2e3522c1.js.map": "/Bug-Tracker/static/js/main.2e3522c1.js.map"
+    "main.d4aa6c37.js.map": "/Bug-Tracker/static/js/main.d4aa6c37.js.map"
   },
   "entrypoints": [
     "static/css/main.1fb4bf59.css",
-    "static/js/main.2e3522c1.js"
+    "static/js/main.d4aa6c37.js"
   ]
 }
