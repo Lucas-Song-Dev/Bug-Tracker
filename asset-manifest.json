@@ -1,12 +1,13 @@
 {
   "files": {
-    "main.css": "/Bug-Tracker/static/css/main.6caa11cc.css",
-    "main.js": "/Bug-Tracker/static/js/main.601c1632.js",
+    "main.css": "/Bug-Tracker/static/css/main.1cc4f7cb.css",
+    "main.js": "/Bug-Tracker/static/js/main.88703c7a.js",
     "static/media/Rajdhani-SemiBold.ttf": "/Bug-Tracker/static/media/Rajdhani-SemiBold.7d928c2670caba5b9dd6.ttf",
     "static/media/Rajdhani-Light.ttf": "/Bug-Tracker/static/media/Rajdhani-Light.7f948ddb3029f1193092.ttf",
     "static/media/Rajdhani-Regular.ttf": "/Bug-Tracker/static/media/Rajdhani-Regular.148606c1eb703f6e597a.ttf",
     "static/media/hound.png": "/Bug-Tracker/static/media/hound.3a0421e01216f6b9a0dc.png",
     "static/media/AstroProfileCircle.png": "/Bug-Tracker/static/media/AstroProfileCircle.d75f4a3e60cb04edd94f.png",
+    "static/media/Lucas_Song.CV.pdf": "/Bug-Tracker/static/media/Lucas_Song.CV.965d7927eeb7dff68743.pdf",
     "static/media/AstroHome.png": "/Bug-Tracker/static/media/AstroHome.9f41abba04d4fcffa098.png",
     "static/media/ComputerSmile.png": "/Bug-Tracker/static/media/ComputerSmile.32456ec8b7c760b6695f.png",
     "static/media/ImageOfBug.png": "/Bug-Tracker/static/media/ImageOfBug.88fcab81ff2f11aefdc0.png",
@@ -18,11 +19,11 @@
     "static/media/lowPolyGrid.svg": "/Bug-Tracker/static/media/lowPolyGrid.a4361e69a2067905c8b1fcb84f0729e3.svg",
     "static/media/buttonBackground.svg": "/Bug-Tracker/static/media/buttonBackground.073004ef13c652256a21.svg",
     "index.html": "/Bug-Tracker/index.html",
-    "main.6caa11cc.css.map": "/Bug-Tracker/static/css/main.6caa11cc.css.map",
-    "main.601c1632.js.map": "/Bug-Tracker/static/js/main.601c1632.js.map"
+    "main.1cc4f7cb.css.map": "/Bug-Tracker/static/css/main.1cc4f7cb.css.map",
+    "main.88703c7a.js.map": "/Bug-Tracker/static/js/main.88703c7a.js.map"
   },
   "entrypoints": [
-    "static/css/main.6caa11cc.css",
-    "static/js/main.601c1632.js"
+    "static/css/main.1cc4f7cb.css",
+    "static/js/main.88703c7a.js"
   ]
 }
